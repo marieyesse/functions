@@ -1,6 +1,6 @@
 # functions
 
-CEMIS.R: calculates cumulative values (e.g. emissions, Cumulative EMISsions).
+CEMIS.R: calculates cumulative values (e.g. emissions, Cumulative EMISsions, athough can be anythign ;-) ).
 Use via: df <- cemis(df, startyear, endyear) assuming the availability of cols "Year"  and "value" 
 
 
