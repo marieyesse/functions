@@ -1,4 +1,4 @@
-CEMIS <- function(df, startyear, endyear){
+cemis <- function(df, startyear, endyear){
  
   df.intrapolate=seq(unique(df$Year)[1],endyear) 
   
