@@ -1,4 +1,4 @@
-# functions
+# Scripts & Functions
 
 ## Functions
 CEMIS.R: calculates cumulative values (e.g. emissions, Cumulative EMISsions, athough can be anythign ;-) ).
