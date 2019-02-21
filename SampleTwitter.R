@@ -54,7 +54,7 @@ token <- create_token(
 Date <-Sys.Date() 
 
 TopicSearch <- c("CEFIC", "CEPI_Paper", "CEMBUREAU", "EUROFER_eu")
-GreenTweet <- c("EII", "EULTS", "ClimateNeutralEU", "EP_Environment", "innovation","CO2", "carbon", "emissions", "sustainability", "future", "energyefficiency", "energy","recycling", "circulareconomy", "demand")
+GreenTweet <- c("EII", "EULTS", "ClimateNeutralEU")
 
 ########################################################################################
 
@@ -130,9 +130,6 @@ COUNTALL = Pull_tweets_list  %>%
   geom_col(aes( fill=Keyword), colour="black") +
   theme_bw() +
   scale_color_paletteer_d(jcolors, rainbow) +
-  #facet_wrap(~Keyword, scales = "free") +
-  xlab(NULL) +
-  #scale_y_log10()+
   coord_flip() +
   scale_fill_paletteer_d(quickpalette, dreaming) +
   guides(fill=guide_legend("Keyword")) +
@@ -174,9 +171,6 @@ COUNTGREEN = Pull_tweets_list  %>%
   geom_col(aes( fill=Keyword), colour="black") +
   theme_bw() +
   scale_color_paletteer_d(jcolors, rainbow) +
-  #facet_wrap(~Keyword, scales = "free") +
-  xlab(NULL) +
-  #scale_y_log10()+
   coord_flip() +
   scale_fill_paletteer_d(quickpalette, dreaming) +
   guides(fill=guide_legend("Keyword")) +
