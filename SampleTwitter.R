@@ -40,11 +40,11 @@ theme_set(
 ########################################################################################
 
 token <- create_token(
-  app = "RtweetStudies",
-  consumer_key = "XsUTxqZNWovUgkNsFctSasLb7", 
-  consumer_secret = "XKg0X52FKVEPMBh4lvMIJZaD0qVuj56vaaPLhsWsJ03xLiZnpD",
-  access_token = '3092191180-6hcwjXBiyE7SVoHmCUVHOrr5kdi0pgYxIKq0YM6',
-  access_secret = 'N6Fk8IZFyE0F4RTWRFoIjFieMNDUS8M162imYoYipgS50')
+  app = "",
+  consumer_key = "", 
+  consumer_secret = "",
+  access_token = '',
+  access_secret = '')
 
 
 ########################################################################################
