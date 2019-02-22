@@ -15,7 +15,7 @@ library(rtweet)
 
 # plotting and pipes!
 library(ggplot2) 
-library(pathwork)
+library(patchwork)
 library(dplyr)
 library(tidyr) 
 library(data.table)
@@ -30,10 +30,6 @@ library(tm)
 
 # coupled words analysis
 library(widyr)
-
-theme_set(
-  theme_bw()
-            )
 
 ########################################################################################
 ## API set-up (Fill in yourself)
@@ -73,7 +69,7 @@ Pull_tweets_list <- rbindlist(Pull_tweets)
 
 
 ## Save to csv
-save_as_csv(Pull_tweets_list, paste("Pull_tweets_list_", Date, " .csv", sep=""), prepend_ids = TRUE, na = "",
+save_as_csv(Pull_tweets_list, paste("Pull_tweets_list_", Date, ".csv", sep=""), prepend_ids = TRUE, na = "",
             fileEncoding = "UTF-8")
 
 ##########################################################################
@@ -142,7 +138,7 @@ COUNTALL = Pull_tweets_list  %>%
   labs(y = "Number of times used",
        x = "Unique words",
        title = paste("Count of unique words in tweets [", Date, " snapshot]", sep=""))  +
-  ggsave(paste("Tweet_industry_BusAssoc_recent_greentweets_",Date,".png", sep=""), width = 15, height = 8, units = c("in")) 
+  ggsave(paste("Tweet_recent_Talking_Points_",Date,".png", sep=""), width = 15, height = 8, units = c("in")) 
 
 
 ##########################################################################
@@ -184,10 +180,10 @@ COUNTGREEN = Pull_tweets_list  %>%
        x = "Unique words",
        title = paste("Count of Tweets per Tweeting person [", Date, " snapshot]", sep=""),
        subtitle=paste("Filtered on:", paste(GreenTweet, collapse=",")))  +
-  ggsave(paste("Tweet_industry_BusAssoc_top_tweeters_greentweets",Date,".png", sep=""), width = 10, height = 8, units = c("in")) 
+  ggsave(paste("Tweet_top_tweeters_greentweets",Date,".png", sep=""), width = 10, height = 8, units = c("in")) 
 
 
-# Compile overview plot (using patvhwork devtools::install_github("thomasp85/patchwork"))
+# Compile overview plot (using patchwork devtools::install_github("thomasp85/patchwork"))
 
 OVERVIEW = TIMELINE + COUNTALL +  plot_layout(ncol =1, heights = c(1, 2))
                  
